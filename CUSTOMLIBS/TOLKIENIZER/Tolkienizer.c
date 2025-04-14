@@ -40,10 +40,6 @@ int main() {
 
 }
 
-void TolkienToJson(Tolkien *TA) {
-
-}
-
 void PrintTolkien(Tolkien T) {
     printf("Word: %s,\nId: %d,\n", T.Word, T.Id);
 }
