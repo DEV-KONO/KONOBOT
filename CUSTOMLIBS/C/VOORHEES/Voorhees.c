@@ -24,9 +24,10 @@ int TolkienToJSON(Tolkien* TolkienArray, int tokenCount, const char* outputPath)
         
         // Embeddings (128 valores)
         fprintf(file, "    \"Embedding\": [");
-        for (int j = 0; j < 128; j++) {
-            fprintf(file, "%.6f%s", TolkienArray[i].Embedding[j], j < 127 ? ", " : "");
-        }
+        // for (int j = 0; j < 128; j++) {
+        //     fprintf(file, "%.6f%s", TolkienArray[i].Embedding[j], j < 127 ? ", " : "");
+        // }
+        //LO COMENTÉ PARA QUE EL EMBEDDING ESTUVIERA VACÍO
         fprintf(file, "]\n  }%s\n", i < tokenCount - 1 ? "," : "");
     }
     fprintf(file, "]\n");

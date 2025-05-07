@@ -8,11 +8,13 @@
 //Usar gcc -I./CUSTOMLIBS/FileReader Tokenizer.c CUSTOMLIBS/FileReader/FileReader.c -o nombre_del_exe
 //en la consola, para poder hacer un ejecutable.
 //Agregar las demás librerias cuando llamemos la función gcc en la terminal
+
+//CORRER ESTO DE ABAJO
 //gcc -I./CUSTOMLIBS/C/FILEREADER -I./CUSTOMLIBS/C/VOORHEES CUSTOMLIBS\C\TOLKIENIZER\Tolkienizer.c CUSTOMLIBS/C/FILEREADER/FileReader.c CUSTOMLIBS/C/VOORHEES/Voorhees.c -o Tolkienizer.exe
 
 int main() {
     
-    const char *fileroute = "C:/Users/samue/Documents/DEV/KONOBOTLLM/DATASET/NEWCorpusFiles/Unique_Corpus.txt";
+    const char *fileroute = "DATASETS/FULL_CORPUS/Full_Unique_Corpus.txt";
 
     // Tolkien *TolkienArray = malloc(WordCount(true, fileroute)*sizeof(Tolkien));
 
@@ -46,7 +48,7 @@ int main() {
 
     //Añadi esto 
     // Llamar a la función para escribir el array a un archivo JSON
-    int result = TolkienToJSON(TolkienArray, TotalWords, "output.json");
+    int result = TolkienToJSON(TolkienArray, TotalWords, "DATASETS/TOKENS/Tokens.json");
 
         if (result == 0) {
             printf("El archivo JSON se ha creado exitosamente.\n");

@@ -37,7 +37,7 @@ with open(r"C:\Users\samue\Documents\DEV\KONOBOTLLM\DATASET\NEWCorpusFiles\joint
             # print(f"Pre: {word}")
             # print(f"Parsed: {word.replace("[", "").replace("]", "").replace(",", "")}")
 
-            word = word.replace("[", "").replace("]", "").replace(",", "")
+            word = word.replace("[", "").replace("]", "").replace(",", "").replace('"', "'")
 
             if is_valid_date(word):
                 # print(f"Parsed Date: {word}")
