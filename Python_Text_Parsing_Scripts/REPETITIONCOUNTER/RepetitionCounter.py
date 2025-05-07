@@ -1,7 +1,7 @@
 import json
 from collections import Counter
 
-with open("output.json", "r", encoding="utf-8") as f:
+with open("DATASETS\TOKENS\Tokens.json", "r", encoding="utf-8") as f:
     tokens = json.load(f)
 
 with open(r"DATASETS\FULL_CORPUS\Full_Repeated_Corpus.txt", "r", encoding="utf-8") as f:
