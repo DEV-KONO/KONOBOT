@@ -3,6 +3,7 @@ from sqlalchemy.orm import sessionmaker
 from models import training_data, engine
 from schemas import *
 
+
 Session = sessionmaker(bind=engine)
 
 session = Session()
@@ -21,7 +22,8 @@ async def new_msg(User: Schema_User):
     session.add(New_User_Msg)
     session.commit()
 
-    return "New message added correctly"
+    return {"message": "New message added correctly"}
+
 
 @app.get("/all_msg")
 async def all_msg():
